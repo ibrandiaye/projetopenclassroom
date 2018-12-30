@@ -1,0 +1,13 @@
+page-lend-book-page{
+
+.rendre{
+        ion-card-header,ion-card-content,ion-grid{
+            background-color: color($colors,secondary-light);
+        }
+    }
+    .emprunt{
+        ion-card-header,ion-card-content,ion-grid{
+            background-color: #ffeeee;
+        }
+    }
+}

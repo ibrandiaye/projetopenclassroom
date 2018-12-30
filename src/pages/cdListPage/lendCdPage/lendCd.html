@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons>
+            <button ion-button clear (click)="modalDissmiss()">fermer</button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-card [ngClass]="{'rendre':cd.etat,'emprunt':!cd.etat } ">
+        <ion-card-header>{{cd.auteur}}</ion-card-header>
+        <ion-card-content>{{cd.titre}}</ion-card-content>
+    </ion-card>
+    <ion-grid>
+        <ion-row>
+            <ion-col><button ion-button full color="secondary" (click)="changerEtat()" [disabled]="cd.etat">rendre</button></ion-col>
+            <ion-col><button ion-button full color="danger" (click)="changerEtat()" [disabled]="!cd.etat">emprunter</button></ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
